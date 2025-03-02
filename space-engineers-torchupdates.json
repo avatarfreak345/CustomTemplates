@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceData": "master.zip",
-        "UpdateSourceArgs": "TorchAPI/Torch/archive/refs/heads/",
+        "UpdateSourceArgs": "TorchAPI/Torch",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionValue": "true",
