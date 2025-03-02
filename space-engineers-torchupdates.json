@@ -3,9 +3,11 @@
         "UpdateStageName": "Installing",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
+        "UpdateSourceData": "*.zip",
         "UpdateSourceArgs": "TorchAPI/Torch",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
+        "UpdateSourceConditionValue": "true",
         "DeleteAfterExtract": true,
         "OneShot": true
     }
