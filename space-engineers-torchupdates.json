@@ -3,7 +3,7 @@
         "UpdateStageName": "Installing",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
-        "UpdateSourceData": "*.zip",
+        "UpdateSourceData": "master.zip",
         "UpdateSourceArgs": "TorchAPI/Torch",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
