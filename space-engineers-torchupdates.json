@@ -1,10 +1,10 @@
 [
     {
-        "UpdateStageName": "Installing",
+        "UpdateStageName": "Downloading and Installing Torch",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
-        "UpdateSourceData": "master.zip",
-        "UpdateSourceArgs": "TorchAPI/Torch",
+        "UpdateSourceData": "TorchAPI/Torch",
+        "UpdateSourceArgs": "latest",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionValue": "true",
