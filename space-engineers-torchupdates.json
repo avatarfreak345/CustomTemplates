@@ -5,10 +5,18 @@
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UnzipUpdateSource": true,
+        "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
+        "DeleteAfterExtract": false,
         "OneShot": false
+    },
+    {
+    "UpdateStageName": "Extract TorchAPI",
+    "UpdateSourcePlatform": "All",
+    "UpdateSource": "ExtractArchive",
+    "UpdateSourceArgs": "*.zip",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "OverwriteExistingFiles": true
     },
     {
         "UpdateStageName": "Initialize Wine",
@@ -25,9 +33,9 @@
         "UpdateStageName": "Winescript Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/avatarfreak345/CustomTemplates/refs/heads/main/space-engineers-torchwinescript.sh",
+        "UpdateSourceData": "https://cloud.jonesyard.com/s/Mfp5Zk2ztd292ya/download/space-engineers-torchwinescript.sh",
         "UpdateSourceArgs": "winescript.sh",
-        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
