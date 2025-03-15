@@ -15,7 +15,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "echo",
-        "UpdateSourceArgs": "{{$FullBaseDir}}/space-engineers-torchwinescript.sh",
+        "UpdateSourceArgs": "{{$FullBaseDir}}space-engineers-torchwinescript.sh",
     },
     {
         "UpdateStageName": "Initialize Wine",
@@ -33,7 +33,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "{{$FullBaseDir}}/space-engineers-torchwinescript.sh",
+        "UpdateSourceArgs": "{{$FullBaseDir}}space-engineers-torchwinescript.sh",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
