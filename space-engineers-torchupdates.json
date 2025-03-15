@@ -1,17 +1,10 @@
 [
     {
-        "UpdateStageName": "Create TorchAPI Directory",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}TorchServer",
-        "OverwriteExistingFiles": false
-    },
-    {
         "UpdateStageName": "Download Torch",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}/TorchServer",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
