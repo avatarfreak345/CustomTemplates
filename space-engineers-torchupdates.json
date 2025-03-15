@@ -1,9 +1,24 @@
 [
     {
+        "UpdateStageName": "Create TorchAPI Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}TorchAPI",
+        "OverwriteExistingFiles": false
+    },
+    {
+        "UpdateStageName": "Fetch TorchAPI Latest Release URL",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"curl -s https://api.github.com/repos/TorchAPI/Torch/releases/latest | grep 'browser_download_url' | grep '.zip' | cut -d '\"' -f 4 > {{$FullBaseDir}}TorchAPI/TorchAPI_url.txt\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "TorchAPI Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://api.github.com/repos/TorchAPI/Torch/releases/latest",
+        "UpdateSourceData": "@{{$FullBaseDir}}TorchAPI/TorchAPI_url.txt",
         "UpdateSourceArgs": "TorchAPI.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}TorchAPI",
         "OverwriteExistingFiles": true
