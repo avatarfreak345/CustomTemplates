@@ -7,18 +7,10 @@
         "OverwriteExistingFiles": false
     },
     {
-        "UpdateStageName": "Fetch TorchAPI Latest Release URL",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"curl -s https://api.github.com/repos/TorchAPI/Torch/releases/latest | grep 'browser_download_url' | grep '.zip' | cut -d '\"' -f 4 > {{$FullBaseDir}}TorchAPI/TorchAPI_url.txt\"",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "TorchAPI Download",
+        "UpdateStageName": "Download TorchAPI from Private Server",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "@{{$FullBaseDir}}TorchAPI/TorchAPI_url.txt",
+        "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
         "UpdateSourceArgs": "TorchAPI.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}TorchAPI",
         "OverwriteExistingFiles": true
