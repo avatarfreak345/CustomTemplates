@@ -11,8 +11,8 @@
     "UpdateSourcePlatform": "All",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
-    "UpdateSourceArgs": "TorchAPI.zip",
-    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "UpdateSourceArgs": "TorchServer.zip",
+    "UpdateSourceTarget": "{{$FullBaseDir}}/TorchAPI",
     "OverwriteExistingFiles": true
     },
     {
@@ -20,15 +20,15 @@
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
     "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"mv {{$FullBaseDir}}/*.zip {{$FullBaseDir}}/TorchAPI.zip\"",
-    "SkipOnFailure": false
+    "UpdateSourceArgs": "-c \"mv {{$FullBaseDir}}/TorchAPI/*.zip {{$FullBaseDir}}/TorchAPI/TorchServer.zip\"",
+    "SkipOnFailure": true
     },
     {
     "UpdateStageName": "Extract TorchAPI",
     "UpdateSourcePlatform": "All",
     "UpdateSource": "ExtractArchive",
-    "UpdateSourceArgs": "{{$FullBaseDir}}TorchAPI.zip",
-    "UpdateSourceTarget": "{{$FullBaseDir}}TorchAPI",
+    "UpdateSourceArgs": "{{$FullBaseDir}}/TorchAPI/TorchServer.zip",
+    "UpdateSourceTarget": "{{$FullBaseDir}}/TorchAPI",
     "OverwriteExistingFiles": true
     },
     {
