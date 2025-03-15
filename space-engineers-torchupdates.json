@@ -11,22 +11,11 @@
         "OneShot": false
     },
     {
-        "UpdateStageName": "Download Winescript",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://cloud.jonesyard.com/s/Mfp5Zk2ztd292ya/download/space-engineers-torchwinescript.sh",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": false,
-        "OneShot": false
-    },
-    {
         "UpdateStageName": "Debug",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "echo",
-        "UpdateSourceArgs": "Full base: {{$FullBaseDir}}",
+        "UpdateSourceArgs": "{{$FullBaseDir}}/space-engineers-torchwinescript.sh",
     },
     {
         "UpdateStageName": "Initialize Wine",
