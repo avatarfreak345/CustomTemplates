@@ -44,7 +44,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./space-engineers-torchwinescript.sh",
+        "UpdateSourceArgs": "{{$FullBaseDir}}/space-engineers-torchwinescript.sh",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
