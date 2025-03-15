@@ -1,43 +1,25 @@
 [
     {
-        "UpdateStageName": "Create TorchAPI Directory",
+        "UpdateStageName": "Download Torch",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}TorchAPI",
-        "OverwriteExistingFiles": false
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
+        "UpdateSourceTarget": "/TorchServer",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     },
     {
-    "UpdateStageName": "Download TorchAPI",
-    "UpdateSourcePlatform": "All",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
-    "UpdateSourceArgs": "TorchServer.zip",
-    "UpdateSourceTarget": "{{$FullBaseDir}}/TorchAPI",
-    "OverwriteExistingFiles": true
-    },
-    {
-    "UpdateStageName": "Ensure Correct ZIP Name",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "Executable",
-    "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"mv {{$FullBaseDir}}/TorchAPI/*.zip {{$FullBaseDir}}/TorchAPI/TorchServer.zip\"",
-    "SkipOnFailure": true
-    },
-    {
-    "UpdateStageName": "Extract TorchAPI",
-    "UpdateSourcePlatform": "All",
-    "UpdateSource": "ExtractArchive",
-    "UpdateSourceArgs": "{{$FullBaseDir}}/TorchAPI/TorchServer.zip",
-    "UpdateSourceTarget": "{{$FullBaseDir}}/TorchAPI",
-    "OverwriteExistingFiles": true
-    },
-    {
-        "UpdateStageName": "Initialise Wine",
+        "UpdateStageName": "Initialize Wine",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all WINEDLLOVERRIDES=\\\"mscoree,mshtml=\\\" /usr/bin/wineboot --init --update\"",
-        "SkipOnFailure": false
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     },
     {
         "UpdateStageName": "Winescript Download",
@@ -46,7 +28,10 @@
         "UpdateSourceData": "https://raw.githubusercontent.com/avatarfreak345/CustomTemplates/refs/heads/main/space-engineers-torchwinescript.sh",
         "UpdateSourceArgs": "winescript.sh",
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
-        "OverwriteExistingFiles": true
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": false,
+        "OneShot": false
     },
     {
         "UpdateStageName": "Install Windows Components",
@@ -54,6 +39,9 @@
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "./winescript.sh",
-        "SkipOnFailure": false
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     }
 ]
