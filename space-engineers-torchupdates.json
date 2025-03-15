@@ -1,5 +1,5 @@
 [
-	{
+    {
         "UpdateStageName": "SteamCMD Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
@@ -23,6 +23,23 @@
         "UpdateSourceTarget": "{{$FullBaseDir}}servers",
         "UpdateSourceArgs": "SpaceEngineers-Dedicated.cfg",
         "OverwriteExistingFiles": false
+    },
+    {
+        "UpdateStageName": "TorchAPI Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://api.github.com/repos/TorchAPI/Torch/releases/latest",
+        "UpdateSourceArgs": "TorchAPI.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}TorchAPI",
+        "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "Extract TorchAPI",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "ExtractArchive",
+        "UpdateSourceArgs": "{{$FullBaseDir}}TorchAPI/TorchAPI.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}TorchAPI",
+        "OverwriteExistingFiles": true
     },
     {
         "UpdateStageName": "Mods Workaround 1",
