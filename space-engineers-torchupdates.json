@@ -1,5 +1,12 @@
 [
     {
+        "UpdateStageName": "Create TorchAPI Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}TorchServer",
+        "OverwriteExistingFiles": false
+    },
+    {
         "UpdateStageName": "Download Torch",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
