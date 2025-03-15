@@ -1,11 +1,11 @@
 Meta.DisplayName=Space Engineers (Torch)
 Meta.Description=Torch server for space engineers
 Meta.Arch=x86_64
-Meta.Author=avatarfreak345 - Made with AMP Config Generator
+Meta.Author=avatarfreak345
 Meta.URL=https://torchapi.com
 Meta.MinAMPVersion=2.4.6.6
-Meta.SpecificDockerImage=cubecoders/ampbase:xvfb
-Meta.DockerRequired=False
+Meta.SpecificDockerImage=cubecoders/ampbase:wine8
+Meta.DockerRequired=True
 Meta.ContainerPolicy=Supported
 Meta.ContainerPolicyReason=
 Meta.Prerequsites=[]
