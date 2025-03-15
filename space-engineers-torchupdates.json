@@ -11,11 +11,13 @@
         "OneShot": false
     },
     {
-        "UpdateStageName": "Debug",
+        "UpdateStageName": "Winescript Download",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "echo",
-        "UpdateSourceArgs": "{{$FullBaseDir}}space-engineers-torchwinescript.sh",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/space-engineers-genericwinescript.sh",
+        "UpdateSourceArgs": "winescript.sh",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "OverwriteExistingFiles": true
     },
     {
         "UpdateStageName": "Initialize Wine",
@@ -33,10 +35,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "{{$FullBaseDir}}space-engineers-torchwinescript.sh",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": false
+        "UpdateSourceArgs": "./winescript.sh",
+        "SkipOnFailure": false
     }
 ]
