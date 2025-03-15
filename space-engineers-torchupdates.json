@@ -11,7 +11,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
-        "UpdateSourceTarget": "TorchServer/",
+        "UpdateSourceTarget": "{{$FullRootDir}}/TorchServer/TorchServer.zip",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
