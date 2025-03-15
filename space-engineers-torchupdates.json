@@ -5,18 +5,17 @@
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://cloud.jonesyard.com/s/oWkMJdAKkR7wHAM/download/torch-server.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UnzipUpdateSource": false,
+        "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
         "OneShot": false
     },
     {
-    "UpdateStageName": "Extract TorchAPI",
-    "UpdateSourcePlatform": "All",
-    "UpdateSource": "ExtractArchive",
-    "UpdateSourceArgs": "*.zip",
-    "UpdateSourceTarget": "{{$FullBaseDir}}",
-    "OverwriteExistingFiles": true
+        "UpdateStageName": "Debug",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "echo",
+        "UpdateSourceArgs": "Full base: {{$FullBaseDir}}",
     },
     {
         "UpdateStageName": "Initialize Wine",
