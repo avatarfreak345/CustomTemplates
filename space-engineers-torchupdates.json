@@ -14,7 +14,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"WINEPREFIX='{{$FullRootDir}}.wine' WINEARCH=win64 WINEDEBUG=-all WINEDLLOVERRIDES='mscoree,mshtml=' /usr/bin/wineboot --init --update\"",
+        "UpdateSourceArgs": "-c \\\"export WINEPREFIX='{{$FullRootDir}}.wine' && export WINEARCH=win64 && export WINEDEBUG=-all && export WINEDLLOVERRIDES='mscoree,mshtml=' && /usr/bin/wineboot --init --update\\\"",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
@@ -41,6 +41,6 @@
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false,
         "OneShot": true,
-        "SkipOnFailure": true
+        "SkipOnFailure": false
     }
 ]
