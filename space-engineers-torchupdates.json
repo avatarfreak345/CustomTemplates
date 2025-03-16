@@ -37,10 +37,6 @@
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "./winescript.sh",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": false,
-        "OneShot": true,
         "SkipOnFailure": false
     }
 ]
