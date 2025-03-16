@@ -28,7 +28,7 @@
         "UpdateSourceArgs": "./winescript.sh",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
+        "DeleteAfterExtract": false,
         "OneShot": true
     }
 ]
