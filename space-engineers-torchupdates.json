@@ -21,15 +21,13 @@
         "OneShot": false
     },
     {
-        "UpdateStageName": "WineScript Download",
+        "UpdateStageName": "Winescript Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/space-engineers-genericwinescript.sh",
+        "UpdateSourceArgs": "winescript.sh",
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": false,
-        "OneShot": false
+        "OverwriteExistingFiles": true
     },
     {
         "UpdateStageName": "Install Windows Components",
