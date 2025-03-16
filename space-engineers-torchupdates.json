@@ -10,6 +10,17 @@
         "OneShot": false
     },
     {
+        "UpdateStageName": "Initialize Wine",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \\\"WINEPREFIX=\\\\\\\"{{$FullRootDir}}.wine\\\\\\\" WINEARCH=win64 WINEDEBUG=-all WINEDLLOVERRIDES=\\\\\\\"mscoree,mshtml=\\\\\\\" /usr/bin/wineboot --init --update\\\"",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
         "UpdateStageName": "WineScript Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
@@ -29,6 +40,7 @@
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false,
-        "OneShot": true
+        "OneShot": true,
+        "SkipOnFailure": true
     }
 ]
