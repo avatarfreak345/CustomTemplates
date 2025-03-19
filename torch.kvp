@@ -1,9 +1,9 @@
-Meta.DisplayName=Space Engineers
-Meta.Description=Space Engineers Dedicated Server
+Meta.DisplayName=Space Engineers (Torch)
+Meta.Description=Torch Dedicated Server
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
-Meta.Author=IceOfWraith, Greelan, CubeCoders(base)
+Meta.Author=avatarfreak345
 Meta.URL=https://store.steampowered.com/app/244850/Space_Engineers/
 Meta.DisplayImageSource=steam:244850
 Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$ApplicationPort1}
