@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "298740",
-        "UpdateSourceArgs": "validate",
+        "UpdateSourceArgs": "",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
