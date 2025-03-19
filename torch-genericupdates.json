@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "298740",
-        "UpdateSourceArgs": "244850",
+        "UpdateSourceArgs": "validate",
         "UpdateSourceVersion": "{{Stream}}",
         "ForceDownloadPlatform": "Windows"
     },
