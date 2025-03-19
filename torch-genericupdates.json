@@ -4,10 +4,12 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "298740",
-        "UpdateSourceArgs": "validate",
-        "UpdateSourceVersion": "{{Stream}}",
-        "ForceDownloadPlatform": "Windows"
-    },
+        "UpdateSourceArgs": "244850",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
     {
         "UpdateStageName": "Create Config Directory",
         "UpdateSourcePlatform": "All",
