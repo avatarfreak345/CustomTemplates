@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": "25565",
+        "Name": "Minecraft",
+        "Description": "Port used for main game traffic",
+        "Ref": "Minecraft"
+    }
+]
