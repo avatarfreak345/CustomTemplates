@@ -1,0 +1,42 @@
+Meta.DisplayName=Space Engineers (Torch via Wine)
+Meta.Description=Runs Torch Server on Linux using Wine in AMP
+Meta.Arch=x86_64
+Meta.Author=YourNameHere
+Meta.URL=
+Meta.MinAMPVersion=2.4.6.6
+Meta.SpecificDockerImage=cubecoders/ampbase:wine
+Meta.DockerRequired=False
+Meta.ContainerPolicy=Supported
+Meta.ContainerPolicyReason=
+Meta.Prerequsites=[]
+Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
+Meta.AppConfigId=59ff86e8-43ae-4c6d-a56e-c21ca45b057a
+
+App.AdminMethod=STDIO
+App.HasReadableConsole=true
+App.HasWritableConsole=true
+App.DisplayName=Space Engineers (Torch via Wine)
+App.CommandLineArgs=-noconsole
+App.CommandLineParameterFormat=-{0} "{1}"
+App.CommandLineParameterDelimiter= 
+App.ApplicationReadyMode=RegexMatch
+App.ExitMethod=OS_CLOSE
+App.ExitString=stop
+App.ExitTimeout=30
+App.ExitFile=app_exit.lck
+App.SupportsLiveSettingsChanges=False
+App.LiveSettingChangeCommandFormat=set {0} "{1}"
+App.ApplicationIs64Bit=true
+App.WinePrefix=~/.wine-torch
+App.ExecutableName=Torch.Server.exe
+App.WorkingDirectory=Instance/torch
+App.UseWine=true
+
+GenericModule.PreInstallScript.0=sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y wine wine64 wine32 winetricks unzip wget curl lib32gcc-s1 steamcmd
+GenericModule.PreInstallScript.1=export WINEPREFIX=~/.wine-torch && export WINEARCH=win64 && winetricks -q dotnet48
+GenericModule.PreInstallScript.2=mkdir -p Instance/se && mkdir -p Instance/torch
+GenericModule.PreInstallScript.3=steamcmd +login anonymous +force_install_dir ./Instance/se +app_update 298740 validate +quit
+GenericModule.PreInstallScript.4=wget -O torch-server.zip https://build.torchapi.com/job/Torch/job/master/lastSuccessfulBuild/artifact/bin/torch-server.zip && unzip -o torch-server.zip -d Instance/torch && rm torch-server.zip
+
+GenericModule.App.Ports.$GamePort=27015
+GenericModule.App.Ports.$SteamQueryPort=27016
