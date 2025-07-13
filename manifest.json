@@ -1,10 +1,9 @@
 {
-    "id": "c53b5833-c28c-434b-b9e3-d0311d511503",
-    "authors": [
-        " - Made with AMP Config Generator"
-    ],
-    "origin": "https://github.com/ - Made with AMP Config Generator/AMPTemplates.git",
-    "url": "https://github.com/ - Made with AMP Config Generator/AMPTemplates",
-    "imagefile": "",
-    "prefix": " - Made with AMP Config Generator"
+	"id": "ec280171-c67b-4cf8-923f-hy244ea6rr55",
+	"authors": ["sam44"],
+	"origin": "https://github.com/sam4413/amp-spaceengineers.git",
+	"url": "https://github.com/sam4413/amp-spaceengineers",
+	"imagefile": "",
+	"prefix": "",
+	"repotype": "AppTemplates"
 }
