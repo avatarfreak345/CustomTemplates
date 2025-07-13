@@ -60,6 +60,7 @@
         "UpdateStageName": "SetExecutableFlag",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UpdateSourceArgs": "Torch.Server.exe",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
