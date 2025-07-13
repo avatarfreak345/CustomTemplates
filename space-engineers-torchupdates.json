@@ -55,5 +55,15 @@
         "UpdateSourceArgs": "AMPUtilities.zip",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "SetExecutableFlag",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "Torch.Server.exe",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     }
 ]
