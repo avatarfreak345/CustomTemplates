@@ -1,0 +1,9 @@
+[
+  {
+    "Protocol": "UDP",
+    "Port": 8800,
+    "Ref": "GamePort1",
+    "Name": "Game Port",
+    "Description": "Main LunaMP game traffic port"
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "UpdateStageName": "Download LunaMP",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://github.com/LunaMultiplayer/LunaMultiplayer/releases/download/0.29.2/LunaMultiplayer-Server-linux-x64-Release.zip",
+    "UpdateSourceTarget": "LunaMultiplayer-Server-linux-x64-Release.zip",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false
+  },
+  {
+    "UpdateStageName": "Install Dotnet",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://dot.net/v1/dotnet-install.sh",
+    "UpdateSourceTarget": "dotnet-install.sh",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "OneShot": true
+  },
+  {
+    "UpdateStageName": "Set Dotnet Installer Exec Flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "dotnet-install.sh",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": false,
+    "DeleteAfterExtract": false,
+    "OneShot": true
+  },
+  {
+    "UpdateStageName": "Run Dotnet Installer",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "./dotnet-install.sh",
+    "UpdateSourceArgs": "--runtime dotnet --channel 6.0 --install-dir ./dotnet",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": false,
+    "DeleteAfterExtract": false,
+    "OneShot": true
+  },
+  {
+    "UpdateStageName": "Set Dotnet Exec Flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "dotnet/dotnet",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": false,
+    "DeleteAfterExtract": false,
+    "OneShot": true
+  }
+]
