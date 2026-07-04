@@ -16,7 +16,7 @@
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://dot.net/v1/dotnet-install.sh",
-    "UpdateSourceTarget": "{{$FullBaseDir}}dotnet-install.sh",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
     "UnzipUpdateSource": false,
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": false,
