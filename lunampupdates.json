@@ -5,7 +5,7 @@
        "UpdateSource": "GithubRelease",
        "UpdateSourceData": "LunaMultiplayer-Server-linux-x64-Release.zip",
        "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
-       "UpdateSourceTarget": "LunaMultiplayer-Server-linux-x64-Release.zip",
+       "UpdateSourceTarget": "./",
        "UnzipUpdateSource": true,
        "OverwriteExistingFiles": true,
        "DeleteAfterExtract": true,
