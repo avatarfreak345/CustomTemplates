@@ -3,7 +3,7 @@
     "UpdateStageName": "Download LunaMP",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://github.com/LunaMultiplayer/LunaMultiplayer/releases/download/0.29.2/LunaMultiplayer-Server-linux-x64-Release.zip",
+    "UpdateSourceData": "https://github.com/LunaMultiplayer/LunaMultiplayer/releases/download/0.29.2/LunaMultiplayer-Server-Release.zip",
     "UpdateSourceTarget": "LunaMultiplayer-Server-linux-x64-Release.zip",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true,
