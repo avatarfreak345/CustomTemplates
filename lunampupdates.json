@@ -52,5 +52,15 @@
     "OverwriteExistingFiles": false,
     "DeleteAfterExtract": false,
     "OneShot": true
-  }
+  },
+  {
+  "UpdateStageName": "Set LunaMP Server Exec Flag",
+  "UpdateSourcePlatform": "Linux",
+  "UpdateSource": "SetExecutableFlag",
+  "UpdateSourceArgs": "{{$FullBaseDir}}LMPServer-linux-x64/Server",
+  "UnzipUpdateSource": false,
+  "OverwriteExistingFiles": false,
+  "DeleteAfterExtract": false,
+  "OneShot": false
+}
 ]
