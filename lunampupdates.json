@@ -1,15 +1,15 @@
 [
- {
-       "UpdateStageName": "Download LunaMP",
-       "UpdateSourcePlatform": "Linux",
-       "UpdateSource": "GithubRelease",
-       "UpdateSourceData": "LunaMultiplayer-Server-linux-x64-Release.zip",
-       "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
-       "UpdateSourceTarget": "{{$FullBaseDir}}",
-       "UnzipUpdateSource": true,
-       "OverwriteExistingFiles": true,
-       "DeleteAfterExtract": false,
-       "OneShot": false
+  {
+    "UpdateStageName": "Download LunaMP",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "GitHubRelease",
+    "UpdateSourceData": "LunaMultiplayer-Server-linux-x64-Release.zip",
+    "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false
   },
   {
     "UpdateStageName": "Install Dotnet",
@@ -32,25 +32,25 @@
     "DeleteAfterExtract": false,
     "OneShot": true
   },
- {
-  "UpdateStageName": "Set Dotnet Installer Exec Flag",
-  "UpdateSourcePlatform": "Linux",
-  "UpdateSource": "SetExecutableFlag",
-  "UpdateSourceArgs": "{{$FullBaseDir}}dotnet-install.sh",
-  "UnzipUpdateSource": false,
-  "OverwriteExistingFiles": false,
-  "DeleteAfterExtract": false,
-  "OneShot": true
-},
- {
-  "UpdateStageName": "Run Dotnet Installer",
-  "UpdateSourcePlatform": "Linux",
-  "UpdateSource": "Executable",
-  "UpdateSourceData": "{{$FullBaseDir}}dotnet-install.sh",
-  "UpdateSourceArgs": "--runtime dotnet --channel 6.0 --install-dir {{$FullBaseDir}}dotnet",
-  "UnzipUpdateSource": false,
-  "OverwriteExistingFiles": false,
-  "DeleteAfterExtract": false,
-  "OneShot": true
-}
+  {
+    "UpdateStageName": "Run Dotnet Installer",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "{{$FullBaseDir}}dotnet-install.sh",
+    "UpdateSourceArgs": "--runtime dotnet --channel 6.0 --install-dir {{$FullBaseDir}}dotnet",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": false,
+    "DeleteAfterExtract": false,
+    "OneShot": true
+  },
+  {
+    "UpdateStageName": "Set Dotnet Exec Flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}dotnet/dotnet",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": false,
+    "DeleteAfterExtract": false,
+    "OneShot": true
+  }
 ]
