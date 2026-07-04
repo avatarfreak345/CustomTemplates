@@ -30,8 +30,8 @@ Meta.AppIsMultiIPAware=False
 
 App.DisplayName=LunaMP
 App.RootDir=./lunamp/
-App.BaseDirectory=./lunamp/serverfiles/
-App.WorkingDir=.
+App.BaseDirectory=./lunamp/
+App.WorkingDir=./lumamp/
 App.ExecutableWin=
 App.ExecutableLinux=./dotnet/dotnet
 App.CommandLineArgs=./LMPServer/Server.dll
