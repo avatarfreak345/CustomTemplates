@@ -1,14 +1,15 @@
 [
-  {
-    "UpdateStageName": "Download LunaMP",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://github.com/LunaMultiplayer/LunaMultiplayer/releases/download/0.29.2/LunaMultiplayer-Server-Release.zip",
-    "UpdateSourceTarget": "LunaMultiplayer-Server-linux-x64-Release.zip",
-    "UnzipUpdateSource": true,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": true,
-    "OneShot": false
+ {
+       "UpdateStageName": "Download LunaMP",
+       "UpdateSourcePlatform": "Linux",
+       "UpdateSource": "GithubRelease",
+       "UpdateSourceData": "LunaMultiplayer-Server-linux-x64-Release.zip",
+       "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
+       "UpdateSourceTarget": "LunaMultiplayer-Server-linux-x64-Release.zip",
+       "UnzipUpdateSource": true,
+       "OverwriteExistingFiles": true,
+       "DeleteAfterExtract": true,
+       "OneShot": false
   },
   {
     "UpdateStageName": "Install Dotnet",
