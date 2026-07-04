@@ -8,7 +8,7 @@
        "UpdateSourceTarget": "./",
        "UnzipUpdateSource": true,
        "OverwriteExistingFiles": true,
-       "DeleteAfterExtract": true,
+       "DeleteAfterExtract": false,
        "OneShot": false
   },
   {
