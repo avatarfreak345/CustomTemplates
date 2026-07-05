@@ -2,6 +2,8 @@
   {
         "ConfigFile": "LMPServer-linux-x64/Config/GeneralSettings.xml",
         "ConfigType": "xml",
-        "AutoMap": true
+        "AutoMap": true,
+        "Importable":true,
+        "DisplayName": "LunaMP Settings"
     }
 ]
