@@ -51,5 +51,16 @@
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
         "OneShot": true
+    },
+    {
+        "UpdateStageName": "Fix config encoding",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"FILE='{{$FullBaseDir}}LMPServer-linux-x64/Config/GeneralSettings.xml'; if [ -f \\\"$FILE\\\" ]; then sed -i 's/encoding=\\\"utf-16\\\"/encoding=\\\"utf-8\\\"/I' \\\"$FILE\\\"; fi\"",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     }
 ]
