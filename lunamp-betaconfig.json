@@ -2,6 +2,7 @@
   {
     "DisplayName": "Server Name",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "Name of the LunaMP server.",
     "Keywords": "server,name",
     "FieldName": "ServerName",
@@ -19,6 +20,7 @@
   {
     "DisplayName": "Server Description",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "Description shown for the LunaMP server.",
     "Keywords": "server,description",
     "FieldName": "Description",
@@ -36,6 +38,7 @@
   {
     "DisplayName": "Server Password",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "Password required to join. Leave blank for public.",
     "Keywords": "server,password",
     "FieldName": "Password",
@@ -53,6 +56,7 @@
   {
     "DisplayName": "Admin Password",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "Password for in-game server administration.",
     "Keywords": "admin,password",
     "FieldName": "AdminPassword",
@@ -70,6 +74,7 @@
   {
     "DisplayName": "Max Players",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "Maximum players allowed on the server.",
     "Keywords": "players,max",
     "FieldName": "MaxPlayers",
@@ -87,6 +92,7 @@
   {
     "DisplayName": "Game Difficulty",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "KSP gameplay difficulty.",
     "Keywords": "game,difficulty",
     "FieldName": "GameDifficulty",
@@ -110,6 +116,7 @@
   {
     "DisplayName": "Game Mode",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "KSP game mode.",
     "Keywords": "game,mode",
     "FieldName": "GameMode",
@@ -131,6 +138,7 @@
   {
     "DisplayName": "Mod Control",
     "Category": "LunaMP",
+    "Subcategory": "General",
     "Description": "Enable LunaMP mod control.",
     "Keywords": "mod,control",
     "FieldName": "ModControl",
