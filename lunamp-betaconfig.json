@@ -7,7 +7,7 @@
         "FieldName": "ServerName",
         "InputType": "text",
         "IsFlagArgument": false,
-        "ParamFieldName": "ServerName",
+        "ParamFieldName": "/GeneralSettingsDefinition/ServerName",
         "IncludeInCommandLine": false,
         "DefaultValue": "Luna Server",
         "Placeholder": "Luna Server",
