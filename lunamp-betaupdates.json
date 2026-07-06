@@ -72,5 +72,15 @@
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
         "OneShot": true
+    },
+    {
+        "UpdateStageName": "Set start.sh Exec Flag",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}LMPServer-linux-x64/Start.sh",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": true
     }
 ]
