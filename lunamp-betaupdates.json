@@ -11,26 +11,15 @@
         "OneShot": false
     },
     {
-        "UpdateStageName": "Generate blank config file",
+        "UpdateStageName": "Get AMP layer",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"CFG='{{$FullBaseDir}}LMPServer-linux-x64/Config'; FILE=\\\"$CFG/GeneralSettings.xml\\\"; mkdir -p \\\"$CFG\\\"; if [ ! -f \\\"$FILE\\\" ]; then printf '%s\\n' '<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>' '<GeneralSettingsDefinition xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" xmlns:xsd=\\\"http://www.w3.org/2001/XMLSchema\\\">' '  <ServerName>Luna Server</ServerName>' '  <Description>Luna Server Description</Description>' '  <CountryCode></CountryCode>' '  <WebsiteText>LMP</WebsiteText>' '  <Website>lunamultiplayer.com</Website>' '  <Password></Password>' '  <AdminPassword></AdminPassword>' '  <ServerMotd>Hi %Name%!' 'Welcome to %ServerName%.' 'Online players: %PlayerCount%</ServerMotd>' '  <PrintMotdInChat>false</PrintMotdInChat>' '  <MaxPlayers>20</MaxPlayers>' '  <MaxUsernameLength>15</MaxUsernameLength>' '  <AutoDekessler>0.5</AutoDekessler>' '  <AutoNuke>0</AutoNuke>' '  <Cheats>true</Cheats>' '  <AllowSackKerbals>false</AllowSackKerbals>' '  <ConsoleIdentifier>Server</ConsoleIdentifier>' '  <GameDifficulty>Normal</GameDifficulty>' '  <GameMode>Career</GameMode>' '  <ModControl>true</ModControl>' '  <NumberOfAsteroids>5</NumberOfAsteroids>' '  <NumberOfComets>5</NumberOfComets>' '  <TerrainQuality>High</TerrainQuality>' '  <SafetyBubbleDistance>100</SafetyBubbleDistance>' '  <MaxVesselParts>200</MaxVesselParts>' '</GeneralSettingsDefinition>' > \\\"$FILE\\\"; fi; sed -i 's/encoding=\\\"utf-16\\\"/encoding=\\\"utf-8\\\"/I' \\\"$FILE\\\"\"",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://cloud.jonesyard.com/public.php/dav/files/SRdEt4FXpGMJyTb/?accept=zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}/LMPServer-linux-x64",
         "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
-    },
-    {
-        "UpdateStageName": "fix encoding",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/usr/bin/python3",
-        "UpdateSourceArgs": "-c \"from pathlib import Path; p=Path('{{$FullBaseDir}}LMPServer-linux-x64/Config/GeneralSettings.xml'); raw=p.read_bytes(); text=raw.decode('utf-16') if raw[:2] in (b'\\xff\\xfe',b'\\xfe\\xff') else raw.decode('utf-8-sig'); text=text.replace('encoding=\\\"utf-8\\\"','encoding=\\\"utf-16\\\"'); text=text.replace('encoding=\\\"utf-16\\\"','encoding=\\\"utf-16\\\"'); p.write_text(text, encoding='utf-16')\"",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": false,
+        "OneShot": false
     },
     {
         "UpdateStageName": "Get Dotnet Installer",
