@@ -1295,7 +1295,7 @@
   {
     "DisplayName": "Min Craft Library Request Interval Ms",
     "Category": "LunaMP",
-    "Subcategory": "Gameplay",
+    "Subcategory": "Craft",
     "Description": "Minimum interval between uploading/requesting crafts in milliseconds",
     "Keywords": "craft,library,request,interval",
     "FieldName": "MinCraftLibraryRequestIntervalMs",
@@ -1313,7 +1313,7 @@
   {
     "DisplayName": "Max Crafts Per User",
     "Category": "LunaMP",
-    "Subcategory": "Gameplay",
+    "Subcategory": "Craft",
     "Description": "Maximum crafts kept per user per type (VAB,SPH and Subassembly)",
     "Keywords": "craft,max,user",
     "FieldName": "MaxCraftsPerUser",
@@ -1331,7 +1331,7 @@
   {
     "DisplayName": "Max Craft Folders",
     "Category": "LunaMP",
-    "Subcategory": "Gameplay",
+    "Subcategory": "Craft",
     "Description": "Maximum crafts folders kept",
     "Keywords": "craft,max,folder",
     "FieldName": "MaxCraftFolders",
