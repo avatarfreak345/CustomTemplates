@@ -144,7 +144,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "PrintMotdInChat",
+    "DisplayName": "Print Motd In Chat",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Writes the server's MOTD (message of the day) in the chat of the user who joins",
@@ -180,7 +180,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "MaxUsernameLength",
+    "DisplayName": "Max Username Length",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Maximum length of a username.",
@@ -252,7 +252,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "AllowSackKerbals>",
+    "DisplayName": "Allow Sack Kerbals",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Allow players to sack kerbals",
@@ -270,7 +270,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "ConsoleIdentifier",
+    "DisplayName": "Console Identifier",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Specify the Name that will appear when you send a message using the server's console.",
@@ -352,7 +352,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "NumberOfAsteroids",
+    "DisplayName": "Number Of Asteroids",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "How many untracked asteroids to spawn into the universe. 0 = Disabled",
@@ -370,7 +370,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "NumberOfComets",
+    "DisplayName": "Number Of Comets",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "How many untracked comets to spawn into the universe. 0 = Disabled",
@@ -388,7 +388,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "TerrainQuality",
+    "DisplayName": "Terrain Quality",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Terrain quality. All clients will need to have this setting in their KSP to avoid terrain differences. Values: Low, Default, High, Ignore. Using 'Ignore' might create bugs",
@@ -411,7 +411,7 @@
     }
   },
   {
-    "DisplayName": "SafetyBubbleDistance",
+    "DisplayName": "Safety Bubble Distance",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Specify the minimum distance in which vessels can interact with eachother at the launch pad and runway",
@@ -429,7 +429,7 @@
     "EnumValues": {}
   },
   {
-    "DisplayName": "MaxVesselParts",
+    "DisplayName": "Max Vessel Parts",
     "Category": "LunaMP",
     "Subcategory": "General",
     "Description": "Max number of parts that a vessel can have when spawning",
