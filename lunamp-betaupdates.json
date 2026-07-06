@@ -20,7 +20,7 @@
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
         "OneShot": true
-    }
+    },
     {
         "UpdateStageName": "Get Dotnet Installer",
         "UpdateSourcePlatform": "Linux",
