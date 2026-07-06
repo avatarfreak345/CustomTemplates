@@ -77,7 +77,7 @@
         "UpdateStageName": "Set start.sh Exec Flag",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "{{$FullBaseDir}}LMPServer-linux-x64/Start.sh",
+        "UpdateSourceArgs": "{{$FullBaseDir}}LMPServer-linux-x64/start.sh",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
