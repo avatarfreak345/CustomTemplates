@@ -22,6 +22,17 @@
         "OneShot": true
     },
     {
+        "UpdateStageName": "fix encoding",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/usr/bin/python3",
+        "UpdateSourceArgs": "-c \"from pathlib import Path; p=Path('{{$FullBaseDir}}LMPServer-linux-x64/Config/GeneralSettings.xml'); raw=p.read_bytes(); text=raw.decode('utf-16') if raw[:2] in (b'\\xff\\xfe',b'\\xfe\\xff') else raw.decode('utf-8-sig'); text=text.replace('encoding=\\\"utf-8\\\"','encoding=\\\"utf-16\\\"'); text=text.replace('encoding=\\\"utf-16\\\"','encoding=\\\"utf-16\\\"'); p.write_text(text, encoding='utf-16')\"",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": true
+    },
+    {
         "UpdateStageName": "Get Dotnet Installer",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
@@ -72,16 +83,5 @@
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
         "OneShot": true
-    },
-    {
-        "UpdateStageName": "Convert config to readable",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"FILE='{{$FullBaseDir}}LMPServer-linux-x64/Config/GeneralSettings.xml'; if [ -f \\\"$FILE\\\" ]; then sed -i 's/encoding=\\\"utf-16\\\"/encoding=\\\"utf-8\\\"/I' \\\"$FILE\\\"; fi\"",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": false
     }
 ]
