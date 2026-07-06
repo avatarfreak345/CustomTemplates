@@ -56,7 +56,7 @@
   {
     "DisplayName": "Admin Password",
     "Category": "LunaMP",
-    "Subcategory": "General",
+    "Subcategory": "Gameplay",
     "Description": "Password for in-game server administration.",
     "Keywords": "admin,password",
     "FieldName": "AdminPassword",
