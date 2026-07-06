@@ -11,6 +11,17 @@
         "OneShot": false
     },
     {
+        "UpdateStageName": "Get AMP layer",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://cloud.jonesyard.com/s/SRdEt4FXpGMJyTb/download/start.sh",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer-linux-x64",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    },
+    {
         "UpdateStageName": "Get Dotnet Installer",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
