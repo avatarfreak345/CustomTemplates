@@ -1,0 +1,19 @@
+[
+	{
+		"DisplayName": "Game Mode",
+  		"Category": "Luna Settings",
+  		"Description": "Specify the game type.",
+  		"Keywords": "game,mode,sandbox,career,science",
+  		"FieldName": "GameMode",
+  		"InputType": "enum",
+  		"IsFlagArgument": false,
+  		"ParamFieldName": "/GeneralSettingsDefinition/GameMode",
+  		"IncludeInCommandLine": false,
+  		"DefaultValue": "Career",
+  		"Placeholder": "Career",
+  		"Suffix": "",
+  		"Hidden": false,
+  		"SkipIfEmpty": false,
+		"EnumValues": {"Sandbox": "Sandbox","Career": "Career","Science": "Science"}
+	}
+]
