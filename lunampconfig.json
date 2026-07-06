@@ -590,7 +590,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Can Revert",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -608,7 +608,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Missing Crews Respawn",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -644,7 +644,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "AutoHire Crews",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -662,7 +662,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Bypass Entry Purchase After Research",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -680,7 +680,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Indestructible Facilities",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -698,7 +698,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Allow Stock Vessels",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -716,7 +716,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Allow Other LaunchSites",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -734,7 +734,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Reentry Heat Scale",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -752,7 +752,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Resource Abundance",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -770,7 +770,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Comm Network",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -788,7 +788,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Starting Funds",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -806,7 +806,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Starting Science",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -824,7 +824,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Starting Reputation",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -842,7 +842,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Science Gain Multiplier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -860,7 +860,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Funds Gain Multiplier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -878,7 +878,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Rep Gain Multiplier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -896,7 +896,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Funds Loss Multiplier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -914,7 +914,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Rep Loss Multiplier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -932,7 +932,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Rep Loss Declined",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -950,7 +950,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Kerbal Exp",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -968,7 +968,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Immediate Level Up",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -986,7 +986,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Allow Negative Currency",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1004,7 +1004,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Pressure Part Limits",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1022,7 +1022,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "G Part Limits",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1040,7 +1040,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "G Kerbal Limits",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1058,7 +1058,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Kerbal G-Tolerance Mult",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1076,7 +1076,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Obey Crossfeed Rules",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1094,7 +1094,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Action Groups Always",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1112,7 +1112,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Building Damage Multiplier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1130,7 +1130,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Part Upgrades",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1148,7 +1148,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Require Signal For Control",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1166,7 +1166,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Reentry Blackout",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1184,7 +1184,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Range Modifier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1202,7 +1202,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Dsn Modifier",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1220,7 +1220,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Occlusion Modifier Vac",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1238,7 +1238,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Occlusion Modifier Atm",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1256,7 +1256,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Extra Groundstations",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
@@ -1274,7 +1274,7 @@
     "SkipIfEmpty": false,
     "EnumValues": {}
   },
-  *{
+  {
     "DisplayName": "Enable Full SAS In Sandbox",
     "Category": "LunaMP",
     "Subcategory": "Gameplay",
