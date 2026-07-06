@@ -15,7 +15,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://cloud.jonesyard.com/public.php/dav/files/SRdEt4FXpGMJyTb/?accept=zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}/LMPServer-linux-x64",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer-linux-x64",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
