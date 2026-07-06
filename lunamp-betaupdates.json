@@ -80,7 +80,7 @@
         "UpdateSourceArgs": "{{$FullBaseDir}}LMPServer-linux-x64/start.sh",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
+        "DeleteAfterExtract": false,
+        "OneShot": false
     }
 ]
