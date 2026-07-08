@@ -5,8 +5,8 @@
         "UpdateSource": "GithubRelease",
         "UpdateSourceData": "LunaMultiplayer-Server-linux-x64-Release.zip",
         "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "OneShot": false
     },
@@ -16,8 +16,8 @@
         "UpdateSource": "GithubRelease",
         "UpdateSourceData": "LunaMultiplayer-Server-Release.zip",
         "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "OneShot": false
     },
