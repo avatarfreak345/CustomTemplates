@@ -1,5 +1,7 @@
 How to add new setting
 
+test
+
 1. Add setting in ampconfig.json
 2. Add config location to start.sh (ie. GENERAL_XML="$CFG_DIR/GeneralSettings.xml")
 3. Add variable in start.sh (ie. SOME_SETTING_HERE="")
