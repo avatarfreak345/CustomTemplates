@@ -1,13 +1,24 @@
 [
 	{
-    "UpdateStageName": "Install Pip",
+    "UpdateStageName": "Download Standalone Pip",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://bootstrap.pypa.io/pip/pip.pyz",
+    "UpdateSourceTarget": "{{$FullBaseDir}}pip.pyz",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "OneShot": false
+	},
+	{
+    "UpdateStageName": "Install Archipelago Dependencies",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
     "UpdateSourceData": "/usr/bin/python3.13",
-    "UpdateSourceArgs": "-m ensurepip --upgrade --user",
+    "UpdateSourceArgs": "{{$FullBaseDir}}pip.pyz install --upgrade --target {{$FullBaseDir}}python-packages -r {{$FullBaseDir}}Archipelago/requirements.txt",
     "UnzipUpdateSource": false,
-    "OverwriteExistingFiles": false,
+    "OverwriteExistingFiles": true,
     "DeleteAfterExtract": false,
-    "OneShot": true
+    "OneShot": false
 	}
 ]
