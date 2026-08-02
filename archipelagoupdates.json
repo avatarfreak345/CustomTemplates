@@ -1,46 +1,57 @@
 [
 	{
-    "UpdateStageName": "Download Archipelago Source",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://github.com/ArchipelagoMW/Archipelago/archive/refs/heads/main.zip",
-    "UpdateSourceTarget": "{{$FullBaseDir}}Archipelago",
-    "UnzipUpdateSource": true,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": true,
-    "OneShot": false
-	},
-	{
-    "UpdateStageName": "Download Standalone Pip",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://bootstrap.pypa.io/pip/pip.pyz",
-    "UpdateSourceTarget": "{{$FullBaseDir}}",
-    "UnzipUpdateSource": false,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": false,
-    "OneShot": false
-	},
-	{
-    "UpdateStageName": "Download Archipelago Requirements",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "FetchURL",
-    "UpdateSourceData": "https://raw.githubusercontent.com/ArchipelagoMW/Archipelago/main/requirements.txt",
-    "UpdateSourceTarget": "{{$FullBaseDir}}",
-    "UnzipUpdateSource": false,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": false,
-    "OneShot": false
-	},
-	{
-    "UpdateStageName": "Install Archipelago Dependencies",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "Executable",
-    "UpdateSourceData": "/usr/bin/python3.13",
-    "UpdateSourceArgs": "{{$FullBaseDir}}pip.pyz install --upgrade --target {{$FullBaseDir}}python-packages -r {{$FullBaseDir}}Archipelago/requirements.txt",
-    "UnzipUpdateSource": false,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": false,
-    "OneShot": false
-	}
+        "UpdateStageName": "Download Archipelago 0.6.7",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/ArchipelagoMW/Archipelago/archive/refs/tags/0.6.7.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Rename Archipelago Source Folder",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/mv",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Archipelago-0.6.7 {{$FullBaseDir}}Archipelago",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Download Standalone Pip",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://bootstrap.pypa.io/pip/pip.pyz",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Remove Previous Python Packages",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/rm",
+        "UpdateSourceArgs": "-rf {{$FullBaseDir}}python-packages",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Install Archipelago Dependencies",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/usr/bin/python3.13",
+        "UpdateSourceArgs": "{{$FullBaseDir}}pip.pyz install --no-cache-dir --target {{$FullBaseDir}}python-packages -r {{$FullBaseDir}}Archipelago/requirements.txt",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    }
 ]
