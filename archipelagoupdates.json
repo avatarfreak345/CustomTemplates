@@ -1,32 +1,10 @@
 [
 	{
-        "UpdateStageName": "Install Python",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/usr/bin/python3",
-        "UpdateSourceArgs": "-m venv \"{{$FullBaseDir}}venv\"",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
-    },
-    {
-    "UpdateStageName": "Upgrade Python Package Tools",
+    "UpdateStageName": "Create Python Virtual Environment",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
-    "UpdateSourceData": "{{$FullBaseDir}}venv/bin/python",
-    "UpdateSourceArgs": "-m pip install --upgrade pip setuptools wheel",
-    "UnzipUpdateSource": false,
-    "OverwriteExistingFiles": false,
-    "DeleteAfterExtract": false,
-    "OneShot": true
-	},
-	{
-    "UpdateStageName": "Install Archipelago Dependencies",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "Executable",
-    "UpdateSourceData": "{{$FullBaseDir}}venv/bin/python",
-    "UpdateSourceArgs": "{{$FullBaseDir}}Archipelago/ModuleUpdate.py --yes",
+    "UpdateSourceData": "/usr/bin/python3.13",
+    "UpdateSourceArgs": "-m venv {{$FullBaseDir}}venv",
     "UnzipUpdateSource": false,
     "OverwriteExistingFiles": false,
     "DeleteAfterExtract": false,
