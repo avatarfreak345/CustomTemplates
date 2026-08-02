@@ -86,7 +86,7 @@
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": false,
     "OneShot": false
-	}
+	},
     {
     "UpdateStageName": "Create Multiworld Directory",
     "UpdateSourcePlatform": "Linux",
