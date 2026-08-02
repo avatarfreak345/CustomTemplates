@@ -55,6 +55,50 @@
         "OneShot": false
     },
     {
+    "UpdateStageName": "Install Setuptools",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/usr/bin/python3.13",
+    "UpdateSourceArgs": "{{$FullBaseDir}}pip.pyz install --no-cache-dir --target {{$FullBaseDir}}python-packages \"setuptools>=75,<81\"",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "OneShot": false
+	},
+	{
+    "UpdateStageName": "Install Secret of Evermore Dependencies",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/usr/bin/python3.13",
+    "UpdateSourceArgs": "{{$FullBaseDir}}pip.pyz install --no-cache-dir --target {{$FullBaseDir}}python-packages -r {{$FullBaseDir}}Archipelago/worlds/soe/requirements.txt",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "OneShot": false
+	},
+	{
+    "UpdateStageName": "Install Zillion Dependencies",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/usr/bin/python3.13",
+    "UpdateSourceArgs": "{{$FullBaseDir}}pip.pyz install --no-cache-dir --target {{$FullBaseDir}}python-packages -r {{$FullBaseDir}}Archipelago/worlds/zillion/requirements.txt",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "OneShot": false
+	}
+    {
+    "UpdateStageName": "Create Multiworld Directory",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/bin/mkdir",
+    "UpdateSourceArgs": "-p {{$FullBaseDir}}multiworld",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": false,
+    "DeleteAfterExtract": false,
+    "OneShot": false
+	},
+    {
         "UpdateStageName": "Set MultiServer Server Exec Flag",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SetExecutableFlag",
