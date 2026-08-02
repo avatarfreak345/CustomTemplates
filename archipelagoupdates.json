@@ -1,9 +1,31 @@
 [
 	{
+    "UpdateStageName": "Download Archipelago Source",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://github.com/ArchipelagoMW/Archipelago/archive/refs/heads/main.zip",
+    "UpdateSourceTarget": "{{$FullBaseDir}}Archipelago",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false
+	},
+	{
     "UpdateStageName": "Download Standalone Pip",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://bootstrap.pypa.io/pip/pip.pyz",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "OneShot": false
+	},
+	{
+    "UpdateStageName": "Download Archipelago Requirements",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/ArchipelagoMW/Archipelago/main/requirements.txt",
     "UpdateSourceTarget": "{{$FullBaseDir}}",
     "UnzipUpdateSource": false,
     "OverwriteExistingFiles": true,
