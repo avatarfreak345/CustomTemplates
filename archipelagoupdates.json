@@ -53,5 +53,15 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
         "OneShot": false
-    }
+    },
+    {
+        "UpdateStageName": "Set MultiServer Server Exec Flag",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Archipelago/MultiServer.py",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": false
+    },
 ]
