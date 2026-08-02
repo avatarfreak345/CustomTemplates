@@ -1,1 +1,9 @@
-[]
+[
+	{
+        "Protocol": "TCP",
+        "Port": 38281,
+        "Offset": 0,
+        "Name": "Game Port",
+        "Ref": "GamePort"
+    }
+]
