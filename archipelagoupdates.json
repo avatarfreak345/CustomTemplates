@@ -4,7 +4,7 @@
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://bootstrap.pypa.io/pip/pip.pyz",
-    "UpdateSourceTarget": "{{$FullBaseDir}}pip.pyz",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
     "UnzipUpdateSource": false,
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": false,
