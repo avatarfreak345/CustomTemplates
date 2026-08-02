@@ -81,4 +81,4 @@ App.ExecutableLinux=/usr/bin/python3.13
 App.LinuxCommandLineArgs=-u MultiServer.py "{{$FullBaseDir}}multiworld/server.archipelago" --host 0.0.0.0 --port {{$GamePort}} --logtime
 App.Ports=@IncludeJson[archipelagoports.json]
 App.UpdateSources=@IncludeJson[archipelagoupdates.json]
-App.EnvironmentVariables={"PYTHONPATH":"{{$FullBaseDir}}python-packages","PYTHONUNBUFFERED":"1"}
+App.EnvironmentVariables={"PYTHONPATH":"{{$FullBaseDir}}python-packages","PYTHONUNBUFFERED":"1","SKIP_REQUIREMENTS_UPDATE":"1"}
