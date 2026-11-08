@@ -1,15 +1,18 @@
 [
   {
-        "UpdateStageName": "Downloading LunaMP",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceData": "moon-sweepers-dedicated-server.zip",
-        "UpdateSourceArgs": "hexonMD/moon-sweepers-dedicated-server",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "OneShot": false
-    },
+    "UpdateStageName": "Downloading Moon Sweepers Server",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "GithubRelease",
+    "UpdateSourceArgs": "hexonMD/moon-sweepers-dedicated-server",
+    "UpdateSourceVersion": "v0.1.0-alpha.2",
+    "UpdateSourceData": "",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false,
+    "SkipOnFailure": false
+  },
   {
     "UpdateStageName": "Install native server module into persistent storage",
     "UpdateSourcePlatform": "Linux",
