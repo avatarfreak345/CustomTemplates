@@ -1,11 +1,10 @@
 [
+  
   {
-    "UpdateStageName": "Downloading Moon Sweepers Server",
+    "UpdateStageName": "Downloading Moon Sweepers Dedicated Server",
     "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "GithubRelease",
-    "UpdateSourceArgs": "hexonMD/moon-sweepers-dedicated-server",
-    "UpdateSourceVersion": "v0.1.0-alpha.2",
-    "UpdateSourceData": "",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://github.com/hexonMD/moon-sweepers-dedicated-server/archive/refs/tags/v0.1.0-alpha.2.zip",
     "UpdateSourceTarget": "{{$FullBaseDir}}",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true,
