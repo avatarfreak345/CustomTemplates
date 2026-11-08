@@ -6,6 +6,7 @@
     "UpdateSourceArgs": "hexonMD/moon-sweepers-dedicated-server",
     "UpdateSourceData": "",
     "UpdateSourceTarget": "{{$FullBaseDir}}release-staging/",
+    "UpdateSourceVersion": "v0.1.0-alpha.2",
     "UnzipUpdateSource": true,
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": true,
