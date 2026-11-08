@@ -1,0 +1,24 @@
+[
+  {
+    "UpdateStageName": "Download latest Moon Sweepers adapter release",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "GithubRelease",
+    "UpdateSourceArgs": "hexonMD/moon-sweepers-dedicated-server",
+    "UpdateSourceData": "",
+    "UpdateSourceTarget": "{{$FullBaseDir}}release-staging/",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Install native server module into persistent storage",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/bin/bash",
+    "UpdateSourceArgs": "-c 'set -e; src=$(find \"{{$FullBaseDir}}release-staging\" -type f -name version.dll -print -quit); test -n \"$src\" || { echo \"No precompiled version.dll found in release asset; server module unchanged\" >&2; exit 1; }; mkdir -p \"{{$FullBaseDir}}serverfiles/mod\"; if test -f \"{{$FullBaseDir}}serverfiles/mod/version.dll\"; then cp -f \"{{$FullBaseDir}}serverfiles/mod/version.dll\" \"{{$FullBaseDir}}serverfiles/mod/version.dll.previous\"; fi; install -m 0644 \"$src\" \"{{$FullBaseDir}}serverfiles/mod/version.dll\"; echo \"Moon Sweepers adapter DLL installed; restart AMP instance to apply\"'",
+    "OneShot": false,
+    "SkipOnFailure": false
+  }
+]
