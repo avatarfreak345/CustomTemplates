@@ -81,4 +81,4 @@ App.ExecutableLinux=/bin/bash
 App.LinuxCommandLineArgs=
 App.Ports=@IncludeJson[moon-sweeperports.json]
 App.UpdateSources=@IncludeJson[moon-sweeperupdates.json]
-App.EnvironmentVariables={"MOON_SERVER_PASSWORD":"{{MoonPassword}}","MOON_ALLOWED_STEAM_IDS":"{{MoonAllowedIDs}}","MOON_SLOT":"{{MoonSlot}}","MOON_GAME_PORT":"{{MoonGamePort}}","MOON_QUERY_PORT":"{{MoonQueryPort}}","MOON_BACKUP_KEEP":"{{MoonBackups}}","TZ":"{{MoonTimezone}}","DISPLAY":":99","WINEARCH":"win64","WINEDEBUG":"-all","WINEDLLOVERRIDES":"mscoree,mshtml=;version=n,b","SteamAppId":"5335510","SteamGameId":"5335510"}
+App.EnvironmentVariables={"MOON_SERVER_PASSWORD":"{{MoonPassword}}","MOON_ALLOWED_STEAM_IDS":"{{MoonAllowedIDs}}","MOON_SLOT":"{{MoonSlot}}","MOON_GAME_PORT":"{{MoonGamePort}}","MOON_QUERY_PORT":"{{MoonQueryPort}}","MOON_BACKUP_KEEP":"{{MoonBackups}}","TZ":"{{MoonTimezone}}","DISPLAY":":99","WINEPREFIX":"/AMP/moon-sweeper/serverfiles/wineprefix","WINEARCH":"win64","WINEDEBUG":"-all","WINEDLLOVERRIDES":"mscoree,mshtml=;version=n,b","SteamAppId":"5335510","SteamGameId":"5335510"}
