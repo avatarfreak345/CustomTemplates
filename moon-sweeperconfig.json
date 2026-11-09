@@ -41,5 +41,15 @@
     "DefaultValue": "1",
     "IncludeInCommandLine": false,
     "ParamFieldName": "MoonBackups"
+  },
+  {
+    "DisplayName": "Moon Slot",
+    "Category": "Moon Sweepers",
+    "Description": "Moon Slot.",
+    "FieldName": "MoonSlot",
+    "InputType": "number",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "ParamFieldName": "MoonSlot"
   }
 ]
