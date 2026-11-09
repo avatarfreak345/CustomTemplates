@@ -11,5 +11,25 @@
     "IsFlagArgument": false,
     "ParamFieldName": "MoonAllowedIDs",
     "Required": false
+  },
+  {
+    "DisplayName": "Game Port",
+    "Category": "Moon Sweepers",
+    "Description": "Port used by the dedicated server.",
+    "FieldName": "MoonGamePort",
+    "InputType": "number",
+    "DefaultValue": "27025",
+    "IncludeInCommandLine": false,
+    "ParamFieldName": "MoonGamePort"
+  },
+  {
+    "DisplayName": "Query Port",
+    "Category": "Moon Sweepers",
+    "Description": "Steam query port.",
+    "FieldName": "MoonQueryPort",
+    "InputType": "number",
+    "DefaultValue": "27026",
+    "IncludeInCommandLine": false,
+    "ParamFieldName": "MoonQueryPort"
   }
 ]
