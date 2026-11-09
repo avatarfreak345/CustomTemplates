@@ -71,13 +71,22 @@
     "SkipOnFailure": false
   },
   {
-    "UpdateStageName": "Moon Sweepers - Diagnose Server Dependencies",
+    "UpdateStageName": "Compile Moon Sweepers Steam Probe",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
-    "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c \"echo '========== MOON SWEEPERS DIAGNOSTICS =========='; echo '[1] Required commands'; for c in wine wine64 wineserver Xvfb xdpyinfo python3 curl unzip; do if command -v \\\"$c\\\" >/dev/null 2>&1; then echo \\\"[OK] $c: $(command -v \\\"$c\\\")\\\"; else echo \\\"[MISSING] $c\\\"; fi; done; echo '[2] Wine executable'; if test -x /usr/lib/wine/wine64; then echo '[OK] /usr/lib/wine/wine64'; else echo '[MISSING] /usr/lib/wine/wine64'; fi; echo '[3] Server files'; for f in serverfiles/bin/entrypoint serverfiles/bin/server-import serverfiles/bin/steam-redist serverfiles/bin/health.py serverfiles/mod/version.dll gamefiles/MoonSweepers.exe gamefiles/GameAssembly.dll gamefiles/UnityPlayer.dll serverfiles/game/MoonSweepers.exe; do if test -f \\\"{{$FullBaseDir}}$f\\\"; then echo \\\"[OK] $f\\\"; else echo \\\"[MISSING] $f\\\"; fi; done; echo '[4] Writable directories'; for d in serverfiles serverfiles/game serverfiles/wineprefix serverfiles/logs; do p=\\\"{{$FullBaseDir}}$d\\\"; if test -d \\\"$p\\\"; then if test -w \\\"$p\\\"; then echo \\\"[OK] $d writable\\\"; else echo \\\"[FAIL] $d not writable\\\"; fi; else echo \\\"[MISSING] $d\\\"; fi; done; echo '[5] Environment'; for v in DISPLAY WINEPREFIX WINEARCH WINEDLLOVERRIDES MOON_SLOT MOON_GAME_PORT MOON_QUERY_PORT MOON_BACKUP_KEEP; do if test -n \\\"${!v:-}\\\"; then echo \\\"[OK] $v is set\\\"; else echo \\\"[MISSING] $v\\\"; fi; done; echo '[6] Runtime commands referenced in entrypoint'; grep -nE 'wine64|Xvfb|xdpyinfo|/opt/moon|/import/game|/data' \\\"{{$FullBaseDir}}serverfiles/bin/entrypoint\\\" | tail -30 || true; echo '========== DIAGNOSTICS COMPLETE =========='\"",
-    "SkipOnFailure": false,
-    "OneShot": false
+    "UpdateSourceData": "/usr/bin/x86_64-w64-mingw32-gcc",
+    "UpdateSourceArgs": "-O2 -Wall -Wextra -Werror -Wno-cast-function-type -static-libgcc \"{{$FullBaseDir}}moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/steam-probe.c\" -o \"{{$FullBaseDir}}serverfiles/bin/steam-probe.exe\"",
+    "OneShot": false,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Verify Moon Sweepers Steam Probe",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/usr/bin/python3",
+    "UpdateSourceArgs": "-c \"from pathlib import Path; p=Path('{{$FullBaseDir}}serverfiles/bin/steam-probe.exe'); assert p.is_file(), 'Steam probe missing'; assert p.read_bytes()[:2]==b'MZ', 'Not a Windows executable'; print('[OK] Steam probe compiled:',p,'Size:',p.stat().st_size,'bytes')\"",
+    "OneShot": false,
+    "SkipOnFailure": false
   },
   {
     "UpdateStageName": "Repair Incomplete Moon Sweepers Game Import",
