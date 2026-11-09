@@ -20,5 +20,14 @@
     "UpdateSourceArgs": "-c \"set -e; cd '{{$FullBaseDir}}'; mkdir -p serverfiles/bin serverfiles/mod; cp moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/entrypoint moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/server-import moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/steam-redist moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/health.py moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/redist-lock.json serverfiles/bin/; chmod +x serverfiles/bin/entrypoint serverfiles/bin/server-import serverfiles/bin/steam-redist; echo 'Runtime source files installed'\"",
     "SkipOnFailure": false,
     "OneShot": false
+  },
+  {
+    "UpdateStageName": "Install precompiled Moon Sweepers version.dll",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "/usr/bin/python3",
+    "UpdateSourceArgs": "-c \"import json,urllib.request,urllib.parse,zipfile,io,pathlib,shutil; tag='v0.1.0-alpha.2'; url='https://api.github.com/repos/hexonMD/moon-sweepers-dedicated-server/releases/tags/'+tag; req=lambda u: urllib.request.Request(u,headers={'User-Agent':'AMP-MoonSweepers-Updater','Accept':'application/vnd.github+json'}); release=json.load(urllib.request.urlopen(req(url),timeout=30)); assets=[a for a in release['assets'] if a['name'].lower().endswith('.zip')]; assert len(assets)==1, 'Expected exactly one release ZIP, found: '+str([a['name'] for a in assets]); payload=urllib.request.urlopen(req(assets[0]['browser_download_url']),timeout=120).read(); z=zipfile.ZipFile(io.BytesIO(payload)); matches=[n for n in z.namelist() if n.lower().endswith('/version.dll') or n.lower()=='version.dll']; assert len(matches)==1, 'Expected one version.dll, found: '+str(matches); data=z.read(matches[0]); assert data[:2]==b'MZ', 'version.dll is not a Windows PE binary'; dest=pathlib.Path('{{$FullBaseDir}}')/'serverfiles/mod/version.dll'; dest.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(dest,dest.with_suffix('.dll.previous')) if dest.exists() else None; dest.write_bytes(data); print('Installed '+str(dest)+' ('+str(len(data))+' bytes) from '+assets[0]['name'])\"",
+    "OneShot": false,
+    "SkipOnFailure": false
   }
 ]
