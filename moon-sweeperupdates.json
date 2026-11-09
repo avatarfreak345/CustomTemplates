@@ -1,7 +1,7 @@
+
 [
-  
   {
-    "UpdateStageName": "Downloading Moon Sweepers Dedicated Server",
+    "UpdateStageName": "Download Moon Sweepers Server",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "FetchURL",
     "UpdateSourceData": "https://github.com/hexonMD/moon-sweepers-dedicated-server/archive/refs/tags/v0.1.0-alpha.2.zip",
@@ -13,12 +13,12 @@
     "SkipOnFailure": false
   },
   {
-    "UpdateStageName": "Install native server module into persistent storage",
+    "UpdateStageName": "Install Moon Sweepers Runtime Files",
     "UpdateSourcePlatform": "Linux",
     "UpdateSource": "Executable",
     "UpdateSourceData": "/bin/bash",
-    "UpdateSourceArgs": "-c 'set -e; src=$(find \"{{$FullBaseDir}}release-staging\" -type f -name version.dll -print -quit); test -n \"$src\" || { echo \"No precompiled version.dll found in release asset; server module unchanged\" >&2; exit 1; }; mkdir -p \"{{$FullBaseDir}}serverfiles/mod\"; if test -f \"{{$FullBaseDir}}serverfiles/mod/version.dll\"; then cp -f \"{{$FullBaseDir}}serverfiles/mod/version.dll\" \"{{$FullBaseDir}}serverfiles/mod/version.dll.previous\"; fi; install -m 0644 \"$src\" \"{{$FullBaseDir}}serverfiles/mod/version.dll\"; echo \"Moon Sweepers adapter DLL installed; restart AMP instance to apply\"'",
-    "OneShot": false,
-    "SkipOnFailure": false
+    "UpdateSourceArgs": "-c \"set -e; cd '{{$FullBaseDir}}'; mkdir -p serverfiles/bin serverfiles/mod; cp moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/entrypoint moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/server-import moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/steam-redist moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/health.py moon-sweepers-dedicated-server-0.1.0-alpha.2/container/server/redist-lock.json serverfiles/bin/; chmod +x serverfiles/bin/entrypoint serverfiles/bin/server-import serverfiles/bin/steam-redist; echo 'Runtime source files installed'\"",
+    "SkipOnFailure": false,
+    "OneShot": false
   }
 ]
