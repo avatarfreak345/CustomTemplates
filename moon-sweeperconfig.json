@@ -13,6 +13,19 @@
     "Required": false
   },
   {
+    "DisplayName": "Password",
+    "Category": "Moon Sweepers",
+    "Description": "Server Password",
+    "Keywords": "password",
+    "FieldName": "MoonPassword",
+    "InputType": "text",
+    "DefaultValue": "CHANGEME",
+    "IncludeInCommandLine": false,
+    "IsFlagArgument": false,
+    "ParamFieldName": "MoonPassword",
+    "Required": false
+  },
+  {
     "DisplayName": "Game Port",
     "Category": "Moon Sweepers",
     "Description": "Port used by the dedicated server.",
