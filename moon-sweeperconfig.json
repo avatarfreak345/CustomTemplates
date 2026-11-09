@@ -31,5 +31,15 @@
     "DefaultValue": "27026",
     "IncludeInCommandLine": false,
     "ParamFieldName": "MoonQueryPort"
+  },
+  {
+    "DisplayName": "Moon Backups",
+    "Category": "Moon Sweepers",
+    "Description": "Moon Backups.",
+    "FieldName": "MoonBackups",
+    "InputType": "number",
+    "DefaultValue": "1",
+    "IncludeInCommandLine": false,
+    "ParamFieldName": "MoonBackups"
   }
 ]
