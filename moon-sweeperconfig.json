@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "DisplayName": "Allowed Steam IDs",
+    "Category": "Moon Sweepers",
+    "Description": "Leave empty to allow anyone with the server password to connect. Otherwise enter 1-15 valid SteamID64s.",
+    "Keywords": "steam allowlist whitelist",
+    "FieldName": "MoonAllowedIDs",
+    "InputType": "text",
+    "DefaultValue": "",
+    "IncludeInCommandLine": false,
+    "IsFlagArgument": false,
+    "ParamFieldName": "MoonAllowedIDs",
+    "Required": false
+  }
+]
