@@ -60,7 +60,7 @@
     "UpdateSourceArgs": "{{$FullBaseDir}}moon-sweepers-patch-paths.py",
     "OneShot": false,
     "SkipOnFailure": false
-  }
+  },
   {
     "UpdateStageName": "Fix Moon Sweepers Wine Executable",
     "UpdateSourcePlatform": "Linux",
